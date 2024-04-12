@@ -1,0 +1,13 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+    "postCreateCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install mariadb-server -y",
+    "postAttachCommand": "sudo service mariadb start",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-mysql"
+            ]
+        }
+    }
+}
